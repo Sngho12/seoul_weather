@@ -27,7 +27,7 @@ jobs: # 실행할 작업을 정의
           OPENWEATHER_API_KEY: ${{secrets.OPENWEATHER_API_KEY}}
         run: python weather_script.py # 파이썬 스크립트를 실행
       - name: commit/push changes
-        run: 
+        run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions@github.com"
           git add seoul_weather.csv # 날씨 데이터 저장 csv를 github에 추가
